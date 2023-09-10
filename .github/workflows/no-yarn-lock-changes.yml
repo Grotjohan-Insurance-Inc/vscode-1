@@ -29,3 +29,10 @@ jobs:
         run: |
           cat $HOME/files.json | jq -e 'any(test("yarn\\.lock$")) | not' \
             || (echo "Changes to yarn.lock files aren't allowed in PRs." && exit 1)
+Warning: Unexpected input(s) 'username', valid inputs are ['route', 'mediaType']
+Run octokit/request-action@v2.x
+GET /repos/microsoft/vscode/collaborators/{username}/permission
+> username: ngrotjohan
+> mediaType: [object Object]
+< 403 297ms
+Error: Resource not accessible by integration
